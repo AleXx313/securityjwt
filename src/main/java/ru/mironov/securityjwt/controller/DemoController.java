@@ -7,14 +7,12 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import ru.mironov.securityjwt.service.UserService;
 
 @RestController
-@RequestMapping("/example")
+@RequestMapping("/demo")
 @RequiredArgsConstructor
 @Tag(name = "Аутентификация")
-public class ExampleController {
-    private final UserService service;
+public class DemoController {
 
     @GetMapping
     @Operation(summary = "Доступен только авторизованным пользователям")
@@ -27,11 +25,5 @@ public class ExampleController {
     @PreAuthorize("hasRole('ADMIN')")
     public String exampleAdmin() {
         return "Hello, admin!";
-    }
-
-    @GetMapping("/get-admin")
-    @Operation(summary = "Получить роль ADMIN (для демонстрации)")
-    public void getAdmin() {
-        service.getAdmin();
     }
 }

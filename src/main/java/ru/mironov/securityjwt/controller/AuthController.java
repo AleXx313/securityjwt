@@ -16,7 +16,7 @@ import ru.mironov.securityjwt.service.AuthenticationService;
 @RestController
 @RequestMapping("/auth")
 @RequiredArgsConstructor
-@Tag(name = "Аутентификация")
+@Tag(name = "Публичный сервис для регистрации и авторизации")
 public class AuthController {
     private final AuthenticationService authenticationService;
 

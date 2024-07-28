@@ -33,8 +33,9 @@ public class AuthenticationServiceTest {
     AuthenticationManager authenticationManager;
     @InjectMocks
     AuthenticationService authenticationService;
+
     @Test
-    public void signUp_shouldSignUpNewUserAndReturnCorrectToken(){
+    public void signUp_shouldSignUpNewUserAndReturnCorrectToken() {
         SignUpRequest request = new SignUpRequest();
         request.setUsername("Tester");
         request.setEmail("test@gmail.com");

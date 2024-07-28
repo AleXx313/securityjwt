@@ -9,5 +9,4 @@ class SecurityjwtApplicationTests {
     @Test
     void contextLoads() {
     }
-
 }

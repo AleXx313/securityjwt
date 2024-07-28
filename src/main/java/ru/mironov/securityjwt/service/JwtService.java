@@ -21,7 +21,7 @@ public class JwtService {
 
     private final String jwtSigningKey;
 
-    public JwtService(@Value("${token.signing.key}") String jwtSigningKey){
+    public JwtService(@Value("${token.signing.key}") String jwtSigningKey) {
         this.jwtSigningKey = jwtSigningKey;
     }
 
